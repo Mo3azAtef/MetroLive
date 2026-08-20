@@ -1,6 +1,6 @@
 # Metro Live System
 
-## About
+## About This project
 
 Metro Live System is a real-time backend (plus a small demo frontend) that
 powers a live metro information system for two kinds of users:
