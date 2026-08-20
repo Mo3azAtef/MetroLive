@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Metro Live — Admin</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="brand">Metro<span>Live</span> <span style="color:#6b7690;font-size:12px;">/ admin</span></div>
+  <nav class="top-links">
+    <a href="/passenger.html">Passenger</a>
+    <a href="/admin.html">Admin</a>
+  </nav>
+</header>
+
+<main style="max-width: 560px;">
+  <div class="card" id="loginCard">
+    <h2>Admin Login</h2>
+    <div class="field">
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="admin@metro.com" />
+    </div>
+    <div class="field">
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="••••••••" />
+    </div>
+    <button class="primary" id="loginBtn">Log In</button>
+    <div class="status-msg" id="loginStatus"></div>
+  </div>
+
+  <div class="card" id="postCard" style="display:none;">
+    <h2>Post Announcement</h2>
+    <div class="field">
+      <label for="stationSelectAdmin">Station</label>
+      <select id="stationSelectAdmin"></select>
+    </div>
+    <div class="field">
+      <label for="text">Announcement Text</label>
+      <textarea id="text" rows="3" placeholder="Next train arriving in 3 minutes"></textarea>
+    </div>
+    <div class="field">
+      <label for="severity">Severity</label>
+      <select id="severity">
+        <option value="info">Info</option>
+        <option value="delay">Delay</option>
+        <option value="disruption">Disruption</option>
+      </select>
+    </div>
+    <button class="primary" id="postBtn">Broadcast Announcement</button>
+    <div class="status-msg" id="postStatus"></div>
+    <div class="presence-pill" style="margin-top:16px;">
+      <span class="dot"></span><span id="adminViewerCount">0</span> passengers watching this station
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="/js/config.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

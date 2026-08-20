@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Metro Live — Passenger</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="top">
+  <div class="brand">Metro<span>Live</span></div>
+  <nav class="top-links">
+    <a href="/passenger.html">Passenger</a>
+    <a href="/admin.html">Admin</a>
+  </nav>
+</header>
+
+<main>
+  <div class="controls-row">
+    <select id="stationSelect">
+      <option value="">Select a station…</option>
+    </select>
+    <span class="presence-pill"><span class="dot"></span><span id="viewerCount">0</span> watching this station</span>
+  </div>
+
+  <div class="board" id="board">
+    <div class="board-row header-row">
+      <div>Announcement</div>
+      <div>Posted</div>
+    </div>
+    <div class="empty-state" id="emptyState">Choose a station above to see live announcements.</div>
+  </div>
+</main>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="/js/config.js"></script>
+<script src="/js/passenger.js"></script>
+</body>
+</html>
